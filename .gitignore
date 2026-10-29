@@ -1,0 +1,54 @@
+# =========================
+# 1. 操作系统与编辑器文件
+# =========================
+# Windows
+Thumbs.db
+Desktop.ini
+# macOS
+.DS_Store
+# IDE / 编辑器
+.vscode/
+.idea/
+*.swp
+
+# =========================
+# 2. Python 运行环境与缓存
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+
+# =========================
+# 3. 核心资产保护（千万不要全局忽略 docx/xlsx）
+# =========================
+# 注意：assets 目录下的 fallback-template.docx 和 ledger-template.xlsx 
+# 是 Skill 核心模板，绝对不能在这里写 *.docx 或 *.xlsx，否则模板会丢失！
+
+# =========================
+# 4. 脚本运行产生的临时文件 (针对 scripts/)
+# =========================
+# 4.1 apply_template.py 默认生成的文件后缀
+*.templated.docx
+
+# 4.2 extract_pdfs.py 提取或合并的文本文件
+corpus.txt
+output/
+temp/
+
+# 4.3 Office 打开模板时产生的隐藏缓存文件
+~$*.docx
+~$*.xlsx
+
+# =========================
+# 5. 用户工作区骨架 (针对 init_workspace.py)
+# =========================
+# 根据 init_workspace.py 的 SCAFFOLD 定义，测试运行时会生成以下目录
+# 里面包含用户的真实论文、文献 PDF、大纲等，严禁提交到 Git！
+01-文献库/
+02-模板库/
+03-初稿/
+04-终稿/
+05-质检文档/
